@@ -1,50 +1,32 @@
+<?= $this->partial('partials/header') ?>
+<?= $this->partial('partials/nav') ?>
+<?= $this->partial('partials/stars') ?>
 
 
     <div id="app">
-        <div class="container">
-            <div class="wrap-1 col-md-8 col-md-offset-1">
+        <div class="container1">
+            <div class="wrap-1">
                 <div class="letter">
-                    <?= $this->tag->image(['img/index/letter.png', 'v-on:mouseover' => 'trans', 'id' => 'letter', 'v-bind:class' => 'trans_class']) ?>
-                    <div class="btn1">
+                    <img v-bind:src = 'letter' id="letter" v-bind:class="trans_class" v-on:mouseenter='turn_to($event,0)' >
+                    <button class="btn1" onclick='window.location.href = "/letter/index"'>
                         写信
-                    </div>
+                    </button>
                 </div>
                 <div class="chuo">
                     <?= $this->tag->image(['img/index/index_12.png']) ?>
                 </div>
-                <div class="card">
-                    <?= $this->tag->image(['img/index/index_09.png']) ?>
-                    <div class="btn1">
+                <div class="Postcard">
+                <img v-bind:src = 'card' id="card" v-bind:class="trans_class1" v-on:mouseover='turn_to($event,1)' alt="" >
+                    <button class="btn1" onclick='window.location.href="#"'>
                         寄明信片
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
+    <div class="kefu" onclick='showModal()'></div>
+    <?= $this->partial('index/modal') ?>
     </div>
 
 
-    <script>
-
-        const vm = new Vue({
-            el: "#app",
-            data: {
-                transX: 0,
-                trans_class : '',
-                turn_back: 'turn_back',
-                turn_to: 'turn_to'
-            },
-            methods: {
-                trans: function () {
-                    this.trans_class = 'turn_back';
-                },
-                trans_back : function () {
-                },
-                trans_to : function () {
-
-                }
-            },
-            delimiters: ['${', '}']
-        })
-    </script>
-
+<?= $this->partial('partials/footer') ?>
 
