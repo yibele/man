@@ -2,6 +2,7 @@
 <?= $this->partial('partials/nav') ?>
 <?= $this->partial('partials/stars') ?>
 
+<div id='app'>
 
     <div class='container1'>
         <div class='charges_content'>
@@ -46,6 +47,6 @@
             </div>
     </div>
 
+</div>
 
 <?= $this->partial('partials/footer') ?>
-

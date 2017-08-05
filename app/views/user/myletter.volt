@@ -1,7 +1,6 @@
 {% extends 'layout/index.volt' %}
 
 {% block content %}
-
     <div class='container1'>
         <div class='myletter_title'>
             <button>我的慢递</button>
@@ -36,5 +35,4 @@
             </div>
         </div>
     </div>
-
 {% endblock %}

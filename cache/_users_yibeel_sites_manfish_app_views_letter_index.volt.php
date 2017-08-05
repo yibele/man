@@ -2,19 +2,19 @@
 <?= $this->partial('partials/nav') ?>
 <?= $this->partial('partials/stars') ?>
 
+<div id='app'>
 
-    <div id="app">
         <div class="container1">
             <div class="letter_menu">
                 <!-- drop down button -->
                 <div class='dropdown is-active'>
                     <ul>
-                        <li class="active" aria-haspopup="true" aria-controls="dropdown-menu">信纸 <span
+                        <li class="active menu-item" aria-haspopup="true" aria-controls="dropdown-menu">信纸 <span
                                     class='fa fa-sort-desc'></span></li>
-                        <li>字体 <span class="fa fa-sort-desc"></span></li>
-                        <li>字号 <span class="fa fa-sort-desc"></span></li>
-                        <li>A <span class="fa fa-sort-desc"></span></li>
-                        <li>添加图片 <span class="fa fa-sort-desc"></span></li>
+                        <li class="menu-item">字体 <span class="fa fa-sort-desc"></span></li>
+                        <li class="menu-item">字号 <span class="fa fa-sort-desc"></span></li>
+                        <li class="menu-item">A <span class="fa fa-sort-desc"></span></li>
+                        <li class="menu-item">添加图片 <span class="fa fa-sort-desc"></span></li>
                     </ul>
                     <ul style="margin-left: 360px; line-height: 38px;">
                         <li class="float_rt" style="padding-top: 8px;">
@@ -35,12 +35,11 @@
 
             <?= $this->partial('letter/menu') ?>
 
-            <div class="letter_content">
+            <div class="letter_content" :style="letter_content_background">
             </div>
             <button class="btn1">下一步：设置收信信息</button>
         </div>
-    </div>
 
+</div>
 
 <?= $this->partial('partials/footer') ?>
-

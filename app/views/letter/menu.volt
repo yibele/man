@@ -1,39 +1,31 @@
 <div class="letter_img_lt menu_active" id="xinzhi">
     <!-- 信件缩略 -->
-    <div class="btn_lf ">
-        <span class="glyphicon glyphicon-menu-left"></span>
+    <div class="btn_lf">
+        <span class="fa fa-chevron-left fa-5x"></span>
     </div>
 
     <div class="letter_img_lt1">
+    {% for xinzhi in xinzhis %}
         <div class="letter_img_detail">
-            {{ image('img/letter/xinzhi_lt_03.png') }}
+            <img alt="" src="{{xinzhi}}">
         </div>
-        <div class="letter_img_detail">
-            {{ image('img/letter/xinzhi_lt_03.png') }}
-        </div>
-        <div class="letter_img_detail active">
-            {{ image('img/letter/xinzhi_lt_03.png') }}
-        </div>
-        <div class="letter_img_detail">
-            {{ image('img/letter/xinzhi_lt_03.png') }}
-        </div>
-        <div class="letter_img_detail">
-            {{ image('img/letter/xinzhi_lt_03.png') }}
-        </div>
-        <div class="letter_img_detail">
-            {{ image('img/letter/xinzhi_lt_03.png') }}
-        </div>
-        <div class="letter_img_detail">
-            {{ image('img/letter/xinzhi_lt_03.png') }}
-        </div>
+    {% endfor %}
     </div>
 
     <div class="btn_rt">
-        <span class=" 	glyphicon glyphicon-menu-right"></span>
+        <span class="fa fa-chevron-right fa-5x"></span>
     </div>
 </div>
 
 <div class="letter_img_lt" id="ziti">
+
+    <div class="btn_lf">
+        <span class='fa fa-chevron-left fa-5x'></span>
+    </div>
+
+    <div class="btn_rt">
+        <span class="fa fa-chevron-right fa-5x"></span>
+    </div>
 
 </div>
 

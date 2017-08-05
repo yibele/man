@@ -13,7 +13,16 @@ const vm = new Vue({
         card_back_03: 'img/index/card_back_03.png',
         tag1: 0,
         tag: 0,
-        count: 0
+        count: 0,
+        letter_content_background : {
+            background:'url(/img/xinzhi/xinzhi_1.jpg)',
+            backgroundSize: 'contain'
+        },
+        xinzhis : ''
+    },
+    mounted : function () {
+        this.xinzhis = "{{xinzhis}}";
+        this.test();
     },
     methods: {
         turn_to: function (event, i) {
@@ -22,7 +31,7 @@ const vm = new Vue({
                     this.tag = 1;
                     this.trans_class = 'turn-0-180';
                     setTimeout(this.chageImg, 750, this.letter_back, i);
-                    setTimeout(this.chageImg, 1500, this.letter_back_02, i);
+                    setTimeout(this.chageImg, 1490, this.letter_back_02, i);
                     setTimeout(this.turn_back, 4000, i);
                 }
             } else {
@@ -30,17 +39,22 @@ const vm = new Vue({
                     this.tag1 = 1;
                     this.trans_class1 = 'turn-0-180';
                     setTimeout(this.chageImg, 750, this.card_back_03, i);
-                    setTimeout(this.chageImg, 1495, this.card_back, i);
+                    setTimeout(this.chageImg, 1490, this.card_back, i);
                     setTimeout(this.turn_back, 4000, i);
                 }
             }
         },
-
         chageImg: function (img, i) {
             if (i == 0) {
                 this.letter = img;
             } else {
                 this.card = img;
+            }
+        },
+
+        test : function () {
+            for(xinzhi in this.xinzhis) {
+                console.log(xinzhi);
             }
         },
 
@@ -81,6 +95,7 @@ window.onload = function () {
     $('.twinkling').height(height);
 };
 
+/* 客服modal开关 */
 function showModal() {
     $('#kefu').show();
 }
@@ -88,4 +103,20 @@ function showModal() {
 function hideModal() {
     $('#kefu').hide();
 }
- 
+
+/* 信件编辑部分 */
+$('.dropdown li').click(function () {
+    $(this).addClass('active').siblings().removeClass('active');
+    var index = $(this).index();
+    for(let i=0;i<4;i++) {
+        $('.letter_img_lt').removeClass('menu_active');
+    }
+    $('.letter_img_lt').addClass(function(j,oldClass) {
+        if(j == index){
+            return 'menu_active';
+        }
+    })
+});
+
+
+

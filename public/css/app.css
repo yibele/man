@@ -262,8 +262,12 @@ input[type=radio] {
     line-height: 38px;
     width: 111px;
     height: 38px;
-    border-right: 1px #ccc solid;
+    border-right: 2px #333333 solid;
     text-align: center;
+    cursor: pointer;
+}
+.letter_menu ul li:hover {
+    background-color: #333333;
 }
 
 .letter_menu ul .active {
@@ -342,7 +346,10 @@ input[type=radio] {
     margin-bottom: 16px;
 }
 
-.letter_img_lt .btn_lf {
+.letter_img_lt .btn_lf{
+    cursor: pointer;
+    padding-top : 75px;
+    padding-left : 20px;
     width: 86px;
     height: 189px;
 }
@@ -352,6 +359,9 @@ input[type=radio] {
 }
 
 .letter_img_lt .btn_rt {
+    cursor: pointer;
+    padding-top: 75px;
+    padding-left: 40px;
     width: 86px;
     height: 189px;
 }
@@ -360,6 +370,11 @@ input[type=radio] {
     display: inline-block;
     margin-right: 22px;
     box-sizing: border-box;
+}
+
+.letter_img_detail>img{
+    width : 82px;
+    height : 138px;
 }
 
 .container1 {
@@ -384,7 +399,7 @@ input[type=radio] {
     width:100%;
     height: 1585px;
     border:1px #515151 solid;
-    background: url(../img/letter/xinzhi1_03.png);
+
 }
 
 /* publetter */
@@ -546,11 +561,15 @@ span .head {
 }
 
 .myletter_title>button {
+    font-weight: 700;
+    font-size : 16px;   
     color :#ccc;
     line-height : 80px;
     background:inherit;
     border : none;
+    cursor: pointer;
 }
+
 
 .myletter_title>button:hover {
     color : #f0f0f0;
@@ -573,13 +592,16 @@ span .head {
 }
 
 .myletter_content_menu .menu >button{
+    color : #ccc;
     line-height : 45px;
     background:inherit;
     border : none;
+    cursor: pointer;
+    font-weight: 400;
 }
 
 .myletter_content_menu .menu >button:hover{
-    color :#f0f0f0;
+    color :#ffffff;
 }
 
 .myletter_content_detail {
@@ -602,7 +624,6 @@ span .head {
     font-size :13px;
     color :#f0f0f0;
     vertical-align:top;
-    padding-top: 20px;
 }
 .myletter_content_detail .content>p {
     margin-bottom : 8px;
