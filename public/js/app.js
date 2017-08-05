@@ -31,7 +31,7 @@ const vm = new Vue({
                     this.tag = 1;
                     this.trans_class = 'turn-0-180';
                     setTimeout(this.chageImg, 750, this.letter_back, i);
-                    setTimeout(this.chageImg, 1490, this.letter_back_02, i);
+                    setTimeout(this.chageImg, 1400, this.letter_back_02, i);
                     setTimeout(this.turn_back, 4000, i);
                 }
             } else {
@@ -51,7 +51,6 @@ const vm = new Vue({
                 this.card = img;
             }
         },
-
         test : function () {
             for(xinzhi in this.xinzhis) {
                 console.log(xinzhi);

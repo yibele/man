@@ -27,13 +27,4 @@ $router->add(
     ]
 );
 
-$router->add(
-    '/letter/index',
-    [
-        'controller'=>'Letter',
-        'action'=>'index'
-    ]
-);
-
-
 $router->handle();
