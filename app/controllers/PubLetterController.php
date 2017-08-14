@@ -1,8 +1,7 @@
 <?php
 
-class PubLetterController extends \Phalcon\Mvc\Controller
+class publetterController extends ControllerBase
 {
-
     public function indexAction()
     {
         $this->view->title = '公开信';
@@ -12,6 +11,5 @@ class PubLetterController extends \Phalcon\Mvc\Controller
         $this->view->id = $id;
 
     }
-
 }
 

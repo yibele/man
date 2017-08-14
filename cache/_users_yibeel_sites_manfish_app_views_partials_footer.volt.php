@@ -25,16 +25,12 @@
     </div>
 </div>
     <?= $this->tag->javascriptInclude('/js/app.js') ?>
-
 <script>
-
     window.onload = function () {
         var height = $(document.body).height();
         var star = $('.stars').height(height);
         $('.twinkling').height(height);
     };
-    
 </script>
-
 </body>
 </html>

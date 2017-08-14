@@ -5,5 +5,5 @@
 <div id='app'>
 {% block content %} {% endblock %}
 </div>
-
+{% block javascript %} {%endblock %}
 {{ partial('partials/footer') }}

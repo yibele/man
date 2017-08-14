@@ -29,5 +29,5 @@
     </div>
 
 </div>
-
+ 
 <?= $this->partial('partials/footer') ?>
