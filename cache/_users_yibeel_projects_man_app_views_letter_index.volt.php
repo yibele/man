@@ -1,5 +1,6 @@
 
   <?= $this->tag->stylesheetLink('/js/jquery-ui.min.css') ?>
+  <?= $this->tag->stylesheetLink('/css/colorpicker.css') ?>
 
 <?= $this->partial('partials/header') ?>
 <?= $this->partial('partials/nav') ?>
@@ -37,14 +38,17 @@
   <?= $this->partial('letter/menu') ?>
 
   <div id="letter_content" :style="letter_content_background">
-    <div id="letter_container" contenteditable="true">
-      这里是测试文件
+    <div id="letter_container">
+      <div id="letter_neirong" contenteditable="true">
+        亲爱的______ :
+      </div>
     </div>
   </div>
 </div>
 <button class="btn1">下一步：设置收信信息</button> 
 </div>
 
+  <?= $this->tag->javascriptInclude('js/colorpicker.js') ?>
   <?= $this->tag->javascriptInclude('js/letter.js') ?>
   <?= $this->tag->javascriptInclude('js/jquery-ui.min.js') ?>
 

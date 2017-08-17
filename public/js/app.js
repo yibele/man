@@ -186,3 +186,23 @@ $(".letter_color").click(function() {
     $(siblings[i]).removeClass('active');
   }
 })
+
+$("#letter_all_colors").click(function () {
+
+})
+
+/** 信件调色板 */
+
+$('#letter_all_colors').ColorPicker({
+  onShow : function (colpkr) {
+    $(colpkr).fadeIn(500);
+    return false;
+  },
+  onHide : function (colpkr) {
+    $(colpkr).fadeOut(500);
+    return false;
+  },
+  onChange : function (hex,hsb){
+    $("#letter_container").css('color','#'+hsb);
+  }
+})

@@ -687,6 +687,11 @@ span .head {
 
 /* 信件编辑 上部分菜单 */
 
+#letter_container {
+  color : #000000;
+  line-height: 150%;
+}
+
 .ui-widget.ui-widget-content {
   height : 5px;
   background-color: #515151;
@@ -734,13 +739,38 @@ span .head {
 .letter_color {
   width : 44px;
   height : 44px;
-  margin : 11px;
+  margin-top : 10px;
+  margin-right: 12px;
+  margin-left: 12px;
   display: inline-block;
   border : 1px #ADADAD solid;
   border-radius: 22px;
+  cursor: pointer;
+}
+
+#letter_all_colors {
+  position : relative;
+  width : 44px;
+  height : 44px;
+  margin-top : 10px;
+  margin-right: 12px;
+  margin-left: 12px;
+  display: inline-block;
+  border : 1px #ADADAD solid;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+#colors {
+  min-width: 888px;
+  text-align: center;
 }
 
 #colors .active {
   border : 3px red solid;
+}
+
+#colorpickerHolder {
+  position: absolute;
 }
 

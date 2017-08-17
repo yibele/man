@@ -44,7 +44,8 @@
       </div>
 
   <div class="" id="colors">
-    <div class="letter_color" style="background-image:url(/img/letter/all_colors_03.png)"></div>
+    <div id="letter_all_colors" style="background-image:url(/img/letter/all_colors_03.png)"></div>
+    <div id="colorpickerHolder"></div>
     <?php foreach ($letter_colors as $color) { ?>
       <div class="letter_color" style="background-color: <?= $color ?>"></div>
     <?php } ?>
@@ -53,5 +54,5 @@
       <span class="fa fa-chevron-right fa-5x"></span>
     </div>
 </div>
-
 <div class="letter_img_lt" id="tianjia"></div>
+
