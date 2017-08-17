@@ -5,11 +5,11 @@
   </div>
 
   <div class="letter_img_lt1" id='letter_tums'>
-    {% for xinzhi in xinzhis %}
+    <?php foreach ($xinzhis as $xinzhi) { ?>
     <div class="letter_img_detail">
-      <img alt="" src="{{xinzhi}}" v-on:click='changeLetterBackground'>
+      <img alt="" src="<?= $xinzhi ?>" v-on:click='changeLetterBackground'>
     </div>
-    {% endfor %}
+    <?php } ?>
   </div>
 
   <div class="btn_rt" @click='scrollRight'>
@@ -45,9 +45,9 @@
 
   <div class="" id="colors">
     <div class="letter_color" style="background-image:url(/img/letter/all_colors_03.png)"></div>
-    {% for color in letter_colors %}
-      <div class="letter_color" style="background-color: {{color}}"></div>
-    {% endfor %}
+    <?php foreach ($letter_colors as $color) { ?>
+      <div class="letter_color" style="background-color: <?= $color ?>"></div>
+    <?php } ?>
   </div>
   <div class="btn_rt">
       <span class="fa fa-chevron-right fa-5x"></span>

@@ -41,10 +41,10 @@ const vm = new Vue({
       fontSize: '20px',
       colWidth: '116px',
       // 容器的属性
-      paddingTop: '120px',
-      paddingBottom: '120px',
-      paddingLeft: '97px',
-      paddingRight: '97px',
+      paddingTop: '120',
+      paddingBottom: '120',
+      paddingLeft: '97',
+      paddingRight: '97',
       width: '100%',
       height: '100%'
     }
@@ -123,19 +123,17 @@ const vm = new Vue({
 
     initContainer: function(config) {
       var letter_container = document.getElementById('letter_container');
-      letter_container.style.paddingTop = config.paddingTop;
-      letter_container.style.paddingBottom = config.paddingBottom;
-      letter_container.style.paddingLeft = config.paddingLeft;
-      letter_container.style.paddingRight = config.paddingRight;
+      letter_container.style.paddingTop = config.paddingTop + 'px';
+      letter_container.style.paddingBottom = config.paddingBottom + 'px';
+      letter_container.style.paddingLeft = config.paddingLeft + 'px';
+      letter_container.style.paddingRight = config.paddingRight + 'px';
       letter_container.style.width = config.width;
       letter_container.style.height = config.height;
-      appendP(letter_container);
     },
 
-    appendP : function (dom) {
+    colors: function(colors) {
 
     }
-
   },
   delimiters: ['${', '}']
 })
@@ -176,4 +174,15 @@ $('.letter_img_detail').click(function() {
   var siblings = $(this).siblings();
   $(this).addClass('active');
   siblings.removeClass('active');
+})
+
+$(".letter_color").click(function() {
+  var color = this.style.backgroundColor;
+  var letter_container = document.getElementById('letter_container');
+  letter_container.style.color = color;
+  var siblings = $(this).siblings();
+  $(this).addClass('active');
+  for (var i = 0; i < siblings.length; i++) {
+    $(siblings[i]).removeClass('active');
+  }
 })

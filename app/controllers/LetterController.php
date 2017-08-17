@@ -25,6 +25,11 @@ class LetterController extends \Phalcon\Mvc\Controller
             '/img/xinzhi/xinzhi_15_tum.jpg',
             '/img/xinzhi/xinzhi_16_tum.jpg',
         ];
+        $this->view->letter_colors = 
+        [
+            '#000000','#978787','#eda58d','#e5e5e5','#f6b37f','#fff78f','#e56540','#eda58d','#e5e5e5',
+            '#f6b37f','#fff78f','#eda58d'
+        ];
     }
 }
 

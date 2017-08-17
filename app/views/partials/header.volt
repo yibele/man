@@ -8,8 +8,8 @@
 
     {{ javascript_include('js/jquery-3.2.1.min.js')}}
     <title>{{title}}</title>
-
-
+    {% block style %}
+    {% endblock %}
     {{ stylesheet_link('/css/bulma.css')}}
     {{ stylesheet_link('/css/override.css')}}
     {{ stylesheet_link('/css/app.css') }}

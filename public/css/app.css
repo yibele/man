@@ -76,7 +76,7 @@ a:hover {
 .wrap-1 .letter,
 .Postcard {
   width: 348px;
-  heigth: 356px;
+  height: 356px;
 }
 
 .wrap-1 .letter {
@@ -423,6 +423,7 @@ input[type=radio] {
 }
 
 
+
 /* publetter */
 
 .publetter {
@@ -683,3 +684,63 @@ span .head {
 .charges_icon {
   margin-right: 35px;
 }
+
+/* 信件编辑 上部分菜单 */
+
+.ui-widget.ui-widget-content {
+  height : 5px;
+  background-color: #515151;
+  border : none;
+  width : 300px;
+}
+
+
+
+#slider_container {
+  font-size : 16px;
+  color : #515151;
+  width : 1000px;
+  height:  100px;
+  padding : 40px;
+}
+
+#amount {
+  color : #ccc;
+  border : 1px #515151 solid;
+  width : 58px;
+  height : 27px;
+  background-color:#000000;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-left : 20px;
+}
+
+#slider {
+  display: inline-block;
+  margin-left : 20px;
+  margin-right:  20px;
+}
+
+.ui-slider-horizontal .ui-slider-handle{
+  height : 22px;
+  width : 22px;
+  border-radius: 11px;
+  top : -8px;
+  background-color : #D3D3D3;
+  border : none;
+}
+
+.letter_color {
+  width : 44px;
+  height : 44px;
+  margin : 11px;
+  display: inline-block;
+  border : 1px #ADADAD solid;
+  border-radius: 22px;
+}
+
+#colors .active {
+  border : 3px red solid;
+}
+

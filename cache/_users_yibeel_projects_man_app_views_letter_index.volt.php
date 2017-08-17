@@ -1,4 +1,12 @@
-{% extends 'layout/index.volt' %} {% block content %}
+
+  <?= $this->tag->stylesheetLink('/js/jquery-ui.min.css') ?>
+
+<?= $this->partial('partials/header') ?>
+<?= $this->partial('partials/nav') ?>
+<?= $this->partial('partials/stars') ?>
+
+<div id='app'>
+
 <div id='letter' class="container1">
   <div class="letter_menu">
     <!-- drop down button -->
@@ -11,22 +19,22 @@
         <li class="menu-item">添加图片 <span class="fa fa-sort-desc"></span></li> </ul>
       <ul style="margin-left: 360px; line-height: 38px;">
         <li class="float_rt" style="padding-top: 8px;">
-          {{ image('img/letter/letter_menu_13.png') }}
+          <?= $this->tag->image(['img/letter/letter_menu_13.png']) ?>
         </li>
         <li class="float_rt" style="padding-top: 8px;">
-          {{ image('img/letter/letter_menu_11.png') }}
+          <?= $this->tag->image(['img/letter/letter_menu_11.png']) ?>
         </li>
         <li class="float_rt" style="padding-top: 8px;">
-          {{ image('img/letter/letter_menu_09.png') }}
+          <?= $this->tag->image(['img/letter/letter_menu_09.png']) ?>
         </li>
         <li class="float_rt" style="padding-top: 8px;">
-          {{ image('img/letter/letter_menu_07.png') }}
+          <?= $this->tag->image(['img/letter/letter_menu_07.png']) ?>
         </li>
       </ul>
     </div>
   </div>
 
-  {{ partial('letter/menu') }}
+  <?= $this->partial('letter/menu') ?>
 
   <div id="letter_content" :style="letter_content_background">
     <div id="letter_container" contenteditable="true">
@@ -34,14 +42,10 @@
     </div>
   </div>
 </div>
-<button class="btn1">下一步：设置收信信息</button> {% endblock %}
+<button class="btn1">下一步：设置收信信息</button> 
+</div>
 
-{% block javascript %}
-  {{ javascript_include('js/letter.js') }}
-  {{ javascript_include('js/jquery-ui.min.js')}}
-{% endblock %}
+  <?= $this->tag->javascriptInclude('js/letter.js') ?>
+  <?= $this->tag->javascriptInclude('js/jquery-ui.min.js') ?>
 
-{% block style %}
-  {{ stylesheet_link('/js/jquery-ui.min.css') }}
-{% endblock %}
-
+<?= $this->partial('partials/footer') ?>
