@@ -32,6 +32,14 @@ class LetterController extends \Phalcon\Mvc\Controller
             '#f6b37f','#fff78f','#eda58d', '#000000','#978787','#eda58d','#e5e5e5','#f6b37f','#fff78f','#e56540','#eda58d','#e5e5e5',
             '#f6b37f','#fff78f','#eda58d','#978787','#eda58d'
         ];
+
+        $this->view->fonts = $this->getFonts();
+    }
+
+    public function getFonts () {
+        $fonts = new Fonts();
+        return $fonts->find()->toArray();
+        //return $fonts->find();
     }
 }
 
