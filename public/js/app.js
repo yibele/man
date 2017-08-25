@@ -112,15 +112,6 @@ const vm = new Vue({
         }
       }
     },
-    scrollLeft: function(e) {
-      console.log('left')
-      $('#letter_tums').scrollLeft($('#letter_tums').scrollLeft() - 114);
-    },
-    scrollRight: function(e) {
-      console.log('right')
-      $('#letter_tums').scrollLeft($('#letter_tums').scrollLeft() + 114);
-    },
-
     initContainer: function(config) {
       var letter_container = document.getElementById('letter_container');
       letter_container.style.paddingTop = config.paddingTop + 'px';

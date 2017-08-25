@@ -42,6 +42,7 @@
   {{ javascript_include('js/colorpicker.js')}}
   {{ javascript_include('js/letter.js') }}
   {{ javascript_include('js/jquery-ui.min.js')}}
+  {{ javascript_include('js/jquery.slides.js')}}
 {% endblock %}
 
 {% block style %}

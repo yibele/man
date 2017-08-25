@@ -1,6 +1,6 @@
 <div class="letter_img_lt menu_active" id="xinzhi">
   <!-- 信件缩略 -->
-  <div class="btn_lf" @click='scrollLeft'>
+  <div class="btn_lf">
     <span class="fa fa-chevron-left fa-5x"></span>
   </div>
 
@@ -12,21 +12,26 @@
     {% endfor %}
   </div>
 
-  <div class="btn_rt" @click='scrollRight'>
+  <div class="btn_rt">
     <span class="fa fa-chevron-right fa-5x"></span>
   </div>
 </div>
 
 <div class="letter_img_lt" id="ziti">
-  <div class="btn_lf">
+  <div class="btn_lf slidesjs-previous slidesjs-navigation ">
     <span class='fa fa-chevron-left fa-5x'></span>
   </div>
 
   <div class="fonts">
-    {% for font in fonts %}
+    {% for f in fonts %}
+    <div>
+      {% for font in f %}
       <div class="fonts_lt">
-        <img src="/img/fonts/{{font['imgSrc']}}" alt="{{font['fname']}}" onclick='changeFontFamily("{{font['fname']}}","{{font['accesskey']}}")'>
+        <img src="/img/fonts/{{font['imgSrc']}}" alt="{{font['fname']}}" class='font_img' onclick='changeFontFamily(event,"{{font[' fname
+          ']}}","{{font['accesskey']}}","{{font['lineHeight']}}");'>
       </div>
+      {% endfor %}
+    </div>
     {% endfor %}
   </div>
 
@@ -46,20 +51,19 @@
 
 <div class="letter_img_lt" id="A">
 
-    <div class="btn_lf">
-        <span class='fa fa-chevron-left fa-5x'></span>
-      </div>
+  <div class="btn_lf">
+    <span class='fa fa-chevron-left fa-5x'></span>
+  </div>
 
   <div class="" id="colors">
     <div id="letter_all_colors" style="background-image:url(/img/letter/all_colors_03.png)"></div>
     <div id="colorpickerHolder"></div>
     {% for color in letter_colors %}
-      <div class="letter_color" style="background-color: {{color}}"></div>
+    <div class="letter_color" style="background-color: {{color['value']}}"></div>
     {% endfor %}
   </div>
   <div class="btn_rt">
-      <span class="fa fa-chevron-right fa-5x"></span>
-    </div>
+    <span class="fa fa-chevron-right fa-5x"></span>
+  </div>
 </div>
 <div class="letter_img_lt" id="tianjia"></div>
-

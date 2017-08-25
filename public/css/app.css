@@ -781,7 +781,6 @@ span .head {
   justify-content : space-between;
   width : 1120px;
   height : 189px;
-  padding-top : 5px;
 }
 
 .fonts .fonts_lt{
@@ -795,5 +794,31 @@ span .head {
   margin-right: 20px;
   padding-top : 10px;
   text-align: center;
+}
+
+.fonts .active {
+  border : 2px red solid;
+}
+.slidesjs-pagination-item {
+  display: none;
+}
+
+.slidesjs-container {
+  width : 940px !important;
+  height : 189px !important;
+}
+
+.slidesjs-control {
+  width : 940px !important;
+  height : 189px !important;
+  text-align: center;
+}
+
+.con {
+  display: inline-block;
+  width : 208px;
+  margin : 5px 10px;
+  height : 41px;
+  border : 1px red solid;
 }
 

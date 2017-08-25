@@ -2,7 +2,6 @@
 <?= $this->partial('partials/header') ?>
 <?= $this->partial('partials/nav') ?>
 <?= $this->partial('partials/stars') ?>
-
 <div id='app'>
 
     <div id="app">

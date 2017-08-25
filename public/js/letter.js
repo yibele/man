@@ -15,7 +15,22 @@ $(function() {
 })
 
 $(function() {
-  $('#slider1').slider({
+
+  $('.fonts').slidesjs({
+    width : 940,
+    height : 189,
+    navigation:{
+      active:false,
+      effect : 'slide'
+    },
+    pagination : {
+      active : false,
+    }
+  });
+
+
+  /** 字体大小滑动 */
+  $('#slider').slider({
     range: 'min',
     min: 24,
     max: 45,
@@ -29,9 +44,15 @@ $(function() {
   $('#letter_container').css('fontSize',$('#slider').slider('value'))
 })
 
-function changeFontFamily(fontFamily,accesskey) {
-  var letter_neirong = document.getElementById('letter_neirong')
+function changeFontFamily(event,fontFamily,accesskey,lineHeight) {
+  var obj = event.srcElement.parentNode;
+  obj = $(obj);
+  obj.addClass('active');
+  var siblings = obj.siblings();
+  siblings.removeClass('active');
   objchangefont(letter_neirong,accesskey);
+  letter_neirong.style.lineHeight = lineHeight;
+  return false;
 }
 /** 信件调色板 */
 

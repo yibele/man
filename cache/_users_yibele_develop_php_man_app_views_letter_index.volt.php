@@ -5,7 +5,6 @@
 <?= $this->partial('partials/header') ?>
 <?= $this->partial('partials/nav') ?>
 <?= $this->partial('partials/stars') ?>
-
 <div id='app'>
 
 <div id='letter' class="container1">
@@ -51,5 +50,6 @@
   <?= $this->tag->javascriptInclude('js/colorpicker.js') ?>
   <?= $this->tag->javascriptInclude('js/letter.js') ?>
   <?= $this->tag->javascriptInclude('js/jquery-ui.min.js') ?>
+  <?= $this->tag->javascriptInclude('js/jquery.slides.js') ?>
 
 <?= $this->partial('partials/footer') ?>

@@ -41,7 +41,6 @@ try {
     echo str_replace(["\n","\r","\t"], '', $application->handle()->getContent());
 
     $test = new LetterController();
-    $test->getFonts();
 
 } catch (\Exception $e) {
     echo $e->getMessage() . '<br>';
