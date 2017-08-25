@@ -31,7 +31,7 @@ $(function() {
 
 function changeFontFamily(fontFamily,accesskey) {
   var letter_neirong = document.getElementById('letter_neirong')
-  objchangefont(letter_neirong,accesskey,function () {console.log(accesskey)});
+  objchangefont(letter_neirong,accesskey);
 }
 /** 信件调色板 */
 
