@@ -1,44 +1,34 @@
 <div class="letter_img_lt menu_active" id="xinzhi">
-  <!-- 信件缩略 -->
-  <div class="btn_lf">
-    <span class="fa fa-chevron-left fa-5x"></span>
+  <div class='btn_lf slidesjs-previous  slidesjs-navigation'>
   </div>
 
+  <?php foreach ($xinzhis as $x) { ?>
   <div class="letter_img_lt1" id='letter_tums'>
-    <?php foreach ($xinzhis as $xinzhi) { ?>
-    <div class="letter_img_detail">
-      <img alt="" src="<?= $xinzhi ?>" v-on:click='changeLetterBackground'>
-    </div>
+    <?php foreach ($x as $xinzhi) { ?>
+      <img src="/img/xinzhi/<?= $xinzhi['src'] ?>" class='letter_img_detail' alt="" @click='changeLetterBackground'>
     <?php } ?>
   </div>
+  <?php } ?>
 
-  <div class="btn_rt">
-    <span class="fa fa-chevron-right fa-5x"></span>
+  <div class="btn_rt slidesjs-next  slidesjs-navigation">
   </div>
 </div>
 
-<div class="letter_img_lt" id="ziti">
-  <div class="btn_lf slidesjs-previous slidesjs-navigation ">
-    <span class='fa fa-chevron-left fa-5x'></span>
+<div class="letter_img_lt menu_active" id="ziti" >
+  <div class='btn_lf slidesjs-previous  slidesjs-navigation'>
   </div>
-
+  <?php foreach ($fonts as $f) { ?>
   <div class="fonts">
-    <?php foreach ($fonts as $f) { ?>
-    <div>
-      <?php foreach ($f as $font) { ?>
-      <div class="fonts_lt">
-        <img src="/img/fonts/<?= $font['imgSrc'] ?>" alt="<?= $font['fname'] ?>" class='font_img' onclick='changeFontFamily(event,"<?= $font[' fname
-          '] ?>","<?= $font['accesskey'] ?>","<?= $font['lineHeight'] ?>");'>
-      </div>
-      <?php } ?>
+    <?php foreach ($f as $font) { ?>
+    <div class="fonts_lt">
+      <img src="/img/fonts/<?= $font['imgSrc'] ?>" alt="<?= $font['fname'] ?>" class='font_img' onclick='changeFontFamily(event,"<?= $font['
+        fname'] ?>","<?= $font['accesskey'] ?>","<?= $font['lineHeight'] ?>");'>
     </div>
     <?php } ?>
   </div>
-
-  <div class="btn_rt">
-    <span class="fa fa-chevron-right fa-5x"></span>
+  <?php } ?>
+    <div class="btn_rt slidesjs-next  slidesjs-navigation">
   </div>
-
 </div>
 
 <div class="letter_img_lt" id="zihao">

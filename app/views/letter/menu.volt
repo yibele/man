@@ -1,44 +1,34 @@
 <div class="letter_img_lt menu_active" id="xinzhi">
-  <!-- 信件缩略 -->
-  <div class="btn_lf">
-    <span class="fa fa-chevron-left fa-5x"></span>
+  <div class='btn_lf slidesjs-previous  slidesjs-navigation'>
   </div>
 
+  {% for x in xinzhis %}
   <div class="letter_img_lt1" id='letter_tums'>
-    {% for xinzhi in xinzhis %}
-    <div class="letter_img_detail">
-      <img alt="" src="{{xinzhi}}" v-on:click='changeLetterBackground'>
-    </div>
+    {% for xinzhi in x %}
+      <img src="/img/xinzhi/{{xinzhi['src']}}" class='letter_img_detail' alt="" @click='changeLetterBackground'>
     {% endfor %}
   </div>
+  {% endfor %}
 
-  <div class="btn_rt">
-    <span class="fa fa-chevron-right fa-5x"></span>
+  <div class="btn_rt slidesjs-next  slidesjs-navigation">
   </div>
 </div>
 
-<div class="letter_img_lt" id="ziti">
-  <div class="btn_lf slidesjs-previous slidesjs-navigation ">
-    <span class='fa fa-chevron-left fa-5x'></span>
+<div class="letter_img_lt menu_active" id="ziti" >
+  <div class='btn_lf slidesjs-previous  slidesjs-navigation'>
   </div>
-
+  {% for f in fonts %}
   <div class="fonts">
-    {% for f in fonts %}
-    <div>
-      {% for font in f %}
-      <div class="fonts_lt">
-        <img src="/img/fonts/{{font['imgSrc']}}" alt="{{font['fname']}}" class='font_img' onclick='changeFontFamily(event,"{{font[' fname
-          ']}}","{{font['accesskey']}}","{{font['lineHeight']}}");'>
-      </div>
-      {% endfor %}
+    {% for font in f %}
+    <div class="fonts_lt">
+      <img src="/img/fonts/{{font['imgSrc']}}" alt="{{font['fname']}}" class='font_img' onclick='changeFontFamily(event,"{{font['
+        fname']}}","{{font['accesskey']}}","{{font['lineHeight']}}");'>
     </div>
     {% endfor %}
   </div>
-
-  <div class="btn_rt">
-    <span class="fa fa-chevron-right fa-5x"></span>
+  {% endfor %}
+    <div class="btn_rt slidesjs-next  slidesjs-navigation">
   </div>
-
 </div>
 
 <div class="letter_img_lt" id="zihao">

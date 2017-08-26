@@ -178,10 +178,6 @@ $(".letter_color").click(function() {
   }
 })
 
-$("#letter_all_colors").click(function () {
-
-})
-
 /** 信件调色板 */
 
 $('#letter_all_colors').ColorPicker({

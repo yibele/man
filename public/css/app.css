@@ -343,7 +343,6 @@ input[type=radio] {
   display: none;
   width: 100%;
   height: 189px;
-  justify-content: space-between;
   border: 1px #515151 solid;
   border-bottom: 0;
   border-top: none;
@@ -356,8 +355,8 @@ input[type=radio] {
 
 .letter_img_lt1 {
   display: flex;
-  width: 1000px;
-  overflow: scroll;
+  width: 940px;
+  height : 189px;
   flex-wrap: nowrap;
   margin-top: 24px;
   margin-bottom: 16px;
@@ -367,7 +366,7 @@ input[type=radio] {
   cursor: pointer;
   padding-top: 75px;
   padding-left: 20px;
-  width: 86px;
+  width: 80px;
   height: 189px;
 }
 
@@ -379,13 +378,14 @@ input[type=radio] {
   cursor: pointer;
   padding-top: 75px;
   padding-left: 40px;
-  width: 86px;
+  width: 80px;
   height: 189px;
 }
 
 .letter_img_detail {
+  width : 114px;
   display: inline-block;
-  margin-right: 22px;
+  margin-right: 16px;
   height: 146px;
 }
 
@@ -776,9 +776,7 @@ span .head {
 
 .fonts {
   overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content : space-between;
+  padding-top : 10px;
   width : 1120px;
   height : 189px;
 }
@@ -790,11 +788,12 @@ span .head {
   height : 41px;
   border : 1px #4A4A4A solid;
   border-radius: 5px;
-  margin-top : 15px;
+  margin-top : 10px;
   margin-right: 20px;
   padding-top : 10px;
   text-align: center;
 }
+
 
 .fonts .active {
   border : 2px red solid;

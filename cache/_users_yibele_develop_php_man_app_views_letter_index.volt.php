@@ -50,6 +50,6 @@
   <?= $this->tag->javascriptInclude('js/colorpicker.js') ?>
   <?= $this->tag->javascriptInclude('js/letter.js') ?>
   <?= $this->tag->javascriptInclude('js/jquery-ui.min.js') ?>
-  <?= $this->tag->javascriptInclude('js/jquery.slides.js') ?>
+  <?= $this->tag->javascriptInclude('js/jquery.slides.min.js') ?>
 
 <?= $this->partial('partials/footer') ?>

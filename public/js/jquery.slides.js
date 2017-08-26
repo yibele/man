@@ -127,13 +127,13 @@
           text: "Next"
         }).appendTo($element);
       }
-      $(".btn_rt").click(function(e) {
+      $(".slidesjs-next",$element).click(function(e) {
         console.log('next');
         e.preventDefault();
         _this.stop(true);
         return _this.next(_this.options.navigation.effect);
       });
-      $(".btn_lf").click(function(e) {
+      $(".slidesjs-previous",$element).click(function(e) {
         e.preventDefault();
         _this.stop(true);
         return _this.previous(_this.options.navigation.effect);
